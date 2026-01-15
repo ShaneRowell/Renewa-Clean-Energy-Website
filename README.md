@@ -6,7 +6,7 @@ Only Webpages I developed will be included in this Repo.
 
 (Completed Jan 2025 to March 2025).
 
-#HOW TO RUN
+#HOW TO RUN:
 
 Save Images folder and all Html/ CSS/ Javascript Files in one folder, And open from there.
 Thanks for looking at my work!
