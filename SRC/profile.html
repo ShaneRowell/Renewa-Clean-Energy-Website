@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewa User Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        background-image: url(Images/BackGroundDiv1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #222;
+        padding: 10px 20px;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      .nav-logo {
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      .profile-container {
+        display: flex;
+        margin: 0 auto;
+      }
+      .profile-sidebar {
+        width: 30%;
+        background-color: #ffad28;
+        color: Black;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+      .profile-sidebar img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid whitesmoke;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .profile-sidebar h2 {
+        margin: 10px 0;
+      }
+      .profile-details {
+        background-color: #d9d9e8;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: left;
+        margin-top: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .profile-details p {
+        margin: 5px 0;
+      }
+      .skills {
+        text-align: left;
+        margin-top: 15px;
+      }
+      .skill-bar {
+        background-color: #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 10px;
+        margin: 5px 0;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .skill-bar div {
+        height: 100%;
+        background-color: #4a90e2;
+      }
+      .profile-content {
+        flex-grow: 1;
+        padding-left: 1px;
+        width: 40%;
+        padding-left: 20px;
+      }
+      .bio {
+        background-color: whitesmoke;
+        color: black;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .info-box {
+        background-color: whitesmoke;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      .info-box h3 {
+        color: #5a54a4;
+        margin-bottom: 10px;
+      }
+      .info-box ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .info-box ul li {
+        padding: 3px 0;
+      }
+
+      .footer-logo {
+        height: 140px;
+        padding-top: 20px;
+      }
+
+      .availability,
+      .contact {
+        background: white;
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .calendar th,
+      .calendar td {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .available {
+        background-color: rgb(7, 91, 119);
+        color: white;
+        font-weight: bold;
+      }
+
+      .contact form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact label {
+        margin: 10px 0 5px;
+      }
+
+      .contact input,
+      .contact textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .contact button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #008cba;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contact button:hover {
+        background-color: #005f75;
+      }
+
+      .un-goals-container {
+        background-color: #d9d9e8;
+        margin-top: 25px;
+        padding: 15px;
+        border-radius: 8px;
+        display: inline-block;
+        color: black;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .un-header {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .un-header img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+      .un-goals {
+        display: flex;
+        gap: 10px;
+      }
+
+      .un-goals img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+      }
+
+      .unlink a {
+        text-decoration: none;
+        color: blue;
+      }
+
+      .unlink a:hover {
+        color: red;
+      }
+
+      .last {
+        width: 30%;
+      }
+
+      .availability {
+        background-color: whitesmoke;
+        overflow-x: auto;
+      }
+
+      .content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 25px;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="Home.html">
+          <img src="Images/Logo.png" alt="Logo" class="nav-logo" />
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="Home.html">Home</a>
+        <a href="Volunteer.html">Volunteer</a>
+        <a href="table2.html">Table</a>
+        <a href="Profile.html" class="active">User Profile</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Sitemap.html">Sitemap</a>
+        <a href="Team.html">Team</a>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="profile-container">
+        <!-- Sidebar Profile Info -->
+        <div class="profile-sidebar">
+          <img src="Images/ProfilePicture.png" alt="User Profile Picture" />
+          <h2>jay Oliver</h2>
+          <p><i>I am an Activist For the New Generation of Clean Energy</i></p>
+          <div class="profile-details">
+            <p><strong>Age:</strong> 21</p>
+            <p><strong>Work:</strong> Student</p>
+            <p><strong>Family:</strong> Single</p>
+            <p><strong>Location:</strong> Colombo</p>
+          </div>
+          <div class="skills">
+            <p><strong>Skills</strong></p>
+            <p>Communication</p>
+            <div class="skill-bar"><div style="width: 70%"></div></div>
+            <p>Team Working</p>
+            <div class="skill-bar"><div style="width: 90%"></div></div>
+            <p>General Knowledge</p>
+            <div class="skill-bar"><div style="width: 90%"></div></div>
+            <p>Presentation</p>
+            <div class="skill-bar"><div style="width: 60%"></div></div>
+          </div>
+          <!--Un Goals-->
+          <div class="un-goals-container">
+            <div class="un-header">
+              <img src="Images/UN.png" alt="UN Goals Logo" />
+              <span class="unlink"
+                ><a href="https://sdgs.un.org/goals" target="_blank"
+                  >UN Goals I Support</a
+                ></span
+              >
+            </div>
+            <div class="un-goals">
+              <img src="Images/goal1.png" alt="Goal 1" />
+              <img src="Images/goal2.png" alt="Goal 2" />
+              <img src="Images/goal5.png" alt="Goal 5" />
+              <img src="Images/goal4.png" alt="Goal 4" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Profile Content -->
+        <div class="profile-content">
+          <div class="info-box">
+            <h3>Short Bio</h3>
+            <p>
+              I am a passionate student and a dedicated activist for clean and
+              renewable energy. With a strong enthusiasm for sustainability, I
+              encourage eco-friendly solutions and advocate for the adoption of
+              green technologies. I participate in environmental campaigns, and
+              educate others on the importance of reducing carbon footprints,
+              and stay engaged with the latest advancements in renewable energy.
+              My mission is to inspire change and contribute to a cleaner, more
+              sustainable future for all.
+            </p>
+          </div>
+
+          <div class="info-box">
+            <h3>Goals</h3>
+            <ul>
+              <li>Goal 1 - Spread Awareness of the Benefits of Clean Energy</li>
+              <li>Goal 2 - Research and Improve Clean Energy Efficiency</li>
+              <li>
+                Goal 3 - Become an Established figure in the Clean Energy
+                Industry
+              </li>
+              <li>
+                Goal 4 - Enable People from all Demographics to Renewable Energy
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Frustrations</h3>
+            <ul>
+              <li>Unethical Energy Practices</li>
+              <li>Exponential increase in Green House Emissions</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Experience</h3>
+            <ul>
+              <li>Community Solar Panel Initiative 2024/25</li>
+              <li>University Green Energy Campaign Circa 2024</li>
+              <li>EXPO Advocacy for Sustainable Policies 2023</li>
+            </ul>
+          </div>
+        </div>
+        <div class="last">
+          <!-- Volunteer Availability Section -->
+          <section class="availability">
+            <h3>Volunteering Availability</h3>
+            <table class="calendar">
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td class="available">4</td>
+                <td class="available">5</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td class="available">7</td>
+                <td>8</td>
+                <td>9</td>
+                <td class="available">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td class="available">20</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+              </tr>
+              <tr>
+                <td class="available">28</td>
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+
+            <!-- Contact Me Section -->
+            <div class="contact">
+              <h2>Contact Me</h2>
+              <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="Images/Logo.png" alt="Logo" class="footer-logo" />
+          </div>
+        </div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section">
+          <h3>Page Editor</h3>
+          <ul>
+            <li>
+              <a href="pageEditor_ST1.html">Student 1 - Abdul Hiffan </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST2.html">Student 2 - Malindu Atukorala </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST3.html">Student 3 - Sanithu Gunasena </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST4.html">Student 4 - Shane Fernando </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Validation Page</h3>
+          <ul>
+            <li>
+              <a href="validation_ST1.html">Student 1 - Abdul Hiffan </a>
+            </li>
+            <li>
+              <a href="validation_ST2.html">Student 2 - Malindu Atukorala </a>
+            </li>
+            <li>
+              <a href="validation_ST3.html">Student 3 - Sanithu Gunasena </a>
+            </li>
+            <li>
+              <a href="validation_ST4.html">Student 4 - Shane Fernando </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

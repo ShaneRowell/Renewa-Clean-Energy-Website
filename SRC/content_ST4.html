@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HydroPower</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Content page specific styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        position: static; /* Ensures the navbar does not move */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #222;
+        padding: 10px 20px;
+        width: 100%;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-logo {
+        height: 70px;
+        margin-right: 10px;
+        padding-top: 10px;
+        padding-top: 10px;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo img {
+        height: 70px;
+
+        display: block;
+      }
+
+      .content-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+      }
+
+      /* Side navigation */
+      .side-nav {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .side-nav ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-nav li {
+        margin: 0.5rem 0;
+      }
+
+      .side-nav a {
+        color: var(--dark-color);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .side-nav a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Main content */
+      .main-content {
+        margin-left: 250px;
+      }
+
+      /* Section styling */
+      .content-section {
+        margin: 3rem 0;
+        scroll-margin-top: 120px;
+      }
+
+      /* Image styling */
+      .content-image {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 12px;
+        margin: 2rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Go to top button */
+      .go-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-color);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+
+      .go-top:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Responsive design */
+      @media (max-width: 1024px) {
+        .side-nav {
+          position: static;
+          margin-bottom: 2rem;
+        }
+
+        .main-content {
+          margin-left: 0;
+        }
+      }
+      .footer-logo {
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="Home.html"
+          ><img
+            src="Images/Logo.png"
+            alt="Affordable Clean Energy Initiative Logo"
+            class="nav-logo"
+        /></a>
+      </div>
+      <div class="nav-links">
+        <a href="Home.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="table2.html">Table</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Sitemap.html">Sitemap</a>
+        <a href="Team.html">Team</a>
+      </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="content-container">
+      <!-- Side Navigation -->
+      <nav class="side-nav">
+        <ul>
+          <li><a href="#introduction">Introduction to HydroPower</a></li>
+          <li><a href="#benefits">Benefits of HydroPower</a></li>
+          <li><a href="#strategies">Efficiency Strategies</a></li>
+          <li><a href="#implementation">Implementation</a></li>
+          <li><a href="#monitoring">Smart Monitoring</a></li>
+          <li><a href="#future">Future Developments</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1 id="introduction">Hydro Energy</h1>
+        <section class="content-section">
+          <p>
+            Hydropower, is a renewable and sustainable source of electricity
+            that harnesses the power of moving water to generate energy. It
+            provides a reliable and efficient way to produce electricity with
+            minimal environmental impact compared to fossil fuels. Hydropower
+            plants contribute to reducing greenhouse gas emissions, support
+            energy security, and offer long-term cost savings. Additionally,
+            hydro energy can be used for flood control, irrigation, and water
+            supply, making it a versatile and essential resource for sustainable
+            development.
+          </p>
+          <img src="Images/dam.jpg" alt="dam image" class="content-image" />
+        </section>
+
+        <section id="benefits" class="content-section">
+          <h1>Benefits of HydroPower</h1>
+          <p>
+            Understanding current Advantages enabled by Hydro energy is the
+            first step towards more utilization of our natural enviroment to our
+            exponential equirement in evergy needs and improving efficiency. Our
+            analysis below show compelling benifits for HydroPower.
+          </p>
+
+          <ul>
+            <li>
+              <b>Renewable & Sustainable</b> - Hydropower only relies on the
+              natural water cycle and its immediate surrounding.
+            </li>
+            <li>
+              <b>Low Greenhouse Gas Emissions</b> - Unlike fossil fuels,
+              hydropower generates electricity with low carbon emissions.
+            </li>
+            <li>
+              <b>Reliable & Efficient</b> - Hydropower plants can provide a
+              steady and consistent energy supply.
+            </li>
+            <li>
+              <b>Supports Water Management</b> - Hydropower dams help with flood
+              control, irrigation and etc.
+            </li>
+          </ul>
+        </section>
+
+        <section id="strategies" class="content-section">
+          <h1>HydroPower Efficiency Strategies</h1>
+          <h3>Smart Grid Integration & Digital Monitoring</h3>
+          <p>
+            Modern power grids utilize advanced monitoring and control systems
+            to optimize energy distribution and reduce losses. Smart grids
+            enable real-time load balancing and demand response.
+          </p>
+          <img src="Images/grid.jpg" alt="smart Grid" class="content-image" />
+
+          <h3>Sediment Management & Dam Maintenance</h3>
+          <p>
+            Regular desilting prevents loss of water storage capacity and
+            maintains efficiency. Upgrading aging infrastructure ensures
+            continuous and optimal performance.
+          </p>
+        </section>
+
+        <section id="implementation" class="content-section">
+          <h1>Implementation Programs</h1>
+          <h4>Our implementation strategy focuses on four key areas:</h4>
+          <ul>
+            <li>Hydropower Modernization Programs</li>
+            <li>Small-Scale & Micro Hydropower Initiatives</li>
+            <li>Pumped Storage Hydropower (PSH) Development</li>
+            <li>Sustainable Hydropower & Environmental Protection Programs</li>
+          </ul>
+        </section>
+
+        <section id="monitoring" class="content-section">
+          <h1>Smart Monitoring Systems</h1>
+          <p>
+            Advanced monitoring systems provide real-time data and analytics
+            for:
+          </p>
+          <ul>
+            <li>Energy consumption patterns</li>
+            <li>Peak load management</li>
+            <li>Equipment performance</li>
+            <li>Cost optimization</li>
+          </ul>
+        </section>
+
+        <section id="future" class="content-section">
+          <h1>Future Developments</h1>
+          <p><b>Looking ahead, we're focusing on:</b></p>
+          <ul>
+            <li>AI-powered energy management</li>
+            <li>Hybrid Hydropower Systems (Hydro + Solar/Wind)</li>
+            <li>Eco-Friendly & Fish-Friendly Hydropower</li>
+            <li>Modular & Small-Scale Hydropower</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Go to Top Button -->
+      <a href="#" class="go-top">↑</a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="Images/Logo.png" alt="Logo" class="footer-logo" />
+          </div>
+        </div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section">
+          <h3>Page Editor</h3>
+          <ul>
+            <li><a href="#">Student 1 - Abdul Hiffan </a></li>
+            <li><a href="#">Student 2 - Malindu Atukorala </a></li>
+            <li><a href="#">Student 3 - Sanithu Gunasena </a></li>
+            <li><a href="#">Student 4 - Shane Fernando </a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Validation</h3>
+          <ul>
+            <li><a href="#">Student 1 - Abdul Hiffan </a></li>
+            <li><a href="#">Student 2 - Malindu Atukorala </a></li>
+            <li><a href="#">Student 3 - Sanithu Gunasena </a></li>
+            <li><a href="#">Student 4 - Shane Fernando </a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

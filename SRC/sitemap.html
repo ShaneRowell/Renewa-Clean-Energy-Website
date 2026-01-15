@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renewa Sitemap</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        background-image: url(Images/BackGroundDiv1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #222;
+        padding: 10px 20px;
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      .nav-logo {
+        height: 70px;
+        margin-right: 10px;
+      }
+
+      .content {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(245, 245, 245, 0.7);
+        align-items: center;
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+      }
+
+      .node {
+        fill: #ffad28;
+        stroke: black;
+        stroke-width: 1;
+        cursor: pointer;
+        transition: fill 0.3s ease, stroke 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 3);
+      }
+
+      .node:hover,
+      .node:focus {
+        fill: #f48a09;
+        stroke: blue;
+      }
+
+      a:hover text {
+        fill: white;
+        transition: fill 0.3s ease, stroke 0.3s ease;
+      }
+
+      .arrow {
+        stroke: black;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .footer-logo {
+        padding-top: 15px;
+      }
+
+      .logo img {
+        height: 60px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="Home.html">
+          <img src="Images/Logo.png" alt="Logo" class="nav-logo" />
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="table.html">Table</a>
+        <a href="profile.html">User Profile</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="sitemap.html" class="active">Sitemap</a>
+        <a href="team.html">Team</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <svg viewBox="-50 0 1300 800" tabindex="0">
+        <defs>
+          <marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="10"
+            refY="3.5"
+            orient="auto"
+          >
+            <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+          </marker>
+        </defs>
+
+        <polyline class="arrow" points="570,1 570,1 570,140" />
+        <polyline class="arrow" points="570,1 570,1 570,330" />
+        <polyline class="arrow" points="570,1 570,1 570,430" />
+        <polyline class="arrow" points="570,1 570,1 570,530" />
+        <polyline class="arrow" points="570,1 570,1 570,630" />
+
+        <polyline class="arrow" points="570,250 845,250 845,630" />
+        <polyline class="arrow" points="570,250 845,250 845,530" />
+        <polyline class="arrow" points="570,250 845,250 845,430" />
+        <polyline class="arrow" points="570,250 845,250 845,330" />
+
+        <polyline class="arrow" points="570,250 1100,250 1100,330" />
+        <polyline class="arrow" points="570,250 1100,250 1100,330" />
+
+        <polyline class="arrow" points="570,250 330,250 330,330" />
+        <polyline class="arrow" points="570,250 330,250 330,430" />
+        <polyline class="arrow" points="570,250 330,250 330,530" />
+        <polyline class="arrow" points="570,250 330,250 330,630" />
+
+        <polyline class="arrow" points="570,250 70,250 70,330" />
+        <polyline class="arrow" points="570,250 70,250 70,430" />
+        <polyline class="arrow" points="570,250 70,250 70,530" />
+        <polyline class="arrow" points="570,250 70,250 70,630" />
+
+        <a href="splash.html" class="node-link">
+          <rect class="node" x="425" y="1" width="300" height="80" rx="5" />
+          <text x="500" y="50">Splash Screen</text>
+        </a>
+        <a href="home.html" class="node-link">
+          <rect class="node" x="425" y="140" width="300" height="80" rx="5" />
+          <text x="510" y="185">Home Page</text>
+        </a>
+        <a href="volunteer.html" class="node-link">
+          <rect class="node" x="-40" y="330" width="210" height="50" rx="5" />
+          <text x="15" y="362">Volunteer</text>
+        </a>
+        <a href="table.html" class="node-link">
+          <rect class="node" x="225" y="330" width="210" height="50" rx="5" />
+          <text x="300" y="362">Table</text>
+        </a>
+        <a href="profile.html" class="node-link">
+          <rect class="node" x="475" y="330" width="210" height="50" rx="5" />
+          <text x="515" y="362">User Profile</text>
+        </a>
+        <a href="feedback.html" class="node-link">
+          <rect class="node" x="740" y="330" width="210" height="50" rx="5" />
+          <text x="785" y="362">Feedback</text>
+        </a>
+        <a href="team.html" class="node-link">
+          <rect class="node" x="1000" y="330" width="210" height="50" rx="5" />
+          <text x="1075" y="362">Team</text>
+        </a>
+        <a href="pageEditor_ST1.html" class="node-link">
+          <rect class="node" x="-40" y="430" width="210" height="50" rx="5" />
+          <text x="5" y="462">Page Editor</text>
+        </a>
+        <a href="pageEditor_ST2.html" class="node-link">
+          <rect class="node" x="225" y="430" width="210" height="50" rx="5" />
+          <text x="270" y="462">Page Editor</text>
+        </a>
+        <a href="pageEditor_ST4.html" class="node-link">
+          <rect class="node" x="475" y="430" width="210" height="50" rx="5" />
+          <text x="520" y="462">Page Editor</text>
+        </a>
+        <a href="pageEditor_ST3.html" class="node-link">
+          <rect class="node" x="740" y="430" width="210" height="50" rx="5" />
+          <text x="780" y="462">Page Editor</text>
+        </a>
+        <a href="content_ST1.html" class="node-link">
+          <rect class="node" x="-40" y="530" width="210" height="50" rx="5" />
+          <text x="-15" y="562">Content Page</text>
+        </a>
+        <a href="content_ST2.html" class="node-link">
+          <rect class="node" x="225" y="530" width="210" height="50" rx="5" />
+          <text x="250" y="562">Content Page</text>
+        </a>
+        <a href="content_ST4.html" class="node-link">
+          <rect class="node" x="475" y="530" width="210" height="50" rx="5" />
+          <text x="495" y="562">Content Page</text>
+        </a>
+        <a href="content_ST3.html" class="node-link">
+          <rect class="node" x="740" y="530" width="210" height="50" rx="5" />
+          <text x="775" y="562">Content Page</text>
+        </a>
+        <a href="validation_ST1.html" class="node-link">
+          <rect class="node" x="-40" y="630" width="210" height="50" rx="5" />
+          <text x="-20" y="662">Validation Page</text>
+        </a>
+        <a href="validation_ST2.html" class="node-link">
+          <rect class="node" x="225" y="630" width="210" height="50" rx="5" />
+          <text x="245" y="662">Validation Page</text>
+        </a>
+        <a href="validation_ST4.html" class="node-link">
+          <rect class="node" x="475" y="630" width="210" height="50" rx="5" />
+          <text x="495" y="662">Validation Page</text>
+        </a>
+        <a href="validation_ST3.html" class="node-link">
+          <rect class="node" x="740" y="630" width="210" height="50" rx="5" />
+          <text x="760" y="662">Validation Page</text>
+        </a>
+      </svg>
+    </div>
+
+    <script>
+      const links = document.querySelectorAll(".node-link");
+      let currentIndex = 0;
+
+      function focusNode(index) {
+        links[index].focus();
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") {
+          currentIndex = (currentIndex + 1) % links.length;
+          focusNode(currentIndex);
+        } else if (e.key === "ArrowUp") {
+          currentIndex = (currentIndex - 1 + links.length) % links.length;
+          focusNode(currentIndex);
+        } else if (e.key === "Enter") {
+          links[currentIndex].click();
+        }
+      });
+
+      // Initial focus
+      focusNode(currentIndex);
+    </script>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="Images/Logo.png" alt="Logo" class="footer-logo" />
+          </div>
+        </div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section"></div>
+
+        <div class="footer-section">
+          <h3>Page Editor</h3>
+          <ul>
+            <li>
+              <a href="pageEditor_ST1.html">Student 1 - Abdul Hiffan </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST2.html">Student 2 - Malindu Atukorala </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST3.html">Student 3 - Sanithu Gunasena </a>
+            </li>
+            <li>
+              <a href="pageEditor_ST4.html">Student 4 - Shane Fernando </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Validation Page</h3>
+          <ul>
+            <li>
+              <a href="validation_ST1.html">Student 1 - Abdul Hiffan </a>
+            </li>
+            <li>
+              <a href="validation_ST2.html">Student 2 - Malindu Atukorala </a>
+            </li>
+            <li>
+              <a href="validation_ST3.html">Student 3 - Sanithu Gunasena </a>
+            </li>
+            <li>
+              <a href="validation_ST4.html">Student 4 - Shane Fernando </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+  </body>
+</html>
