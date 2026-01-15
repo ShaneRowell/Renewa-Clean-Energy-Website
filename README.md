@@ -8,7 +8,7 @@ Only Webpages I developed will be included in this Repo.
 
 #HOW TO RUN:
 
-Save Images folder and all Html, CSS, Javascript Files in one folder, And open from there.
+Download SRC file onto your system, And launch a page from there.
 Thanks for looking at my work!
 
 
